@@ -3,9 +3,8 @@ function makeLoadedDie() {
   var count = 0;
 
   return function() {
-    count = (count + 1) % 10;
-    return list[count];
-  }
+    return list[count++];
+  };
 }
 
 var rollLoadedDie = makeLoadedDie();
